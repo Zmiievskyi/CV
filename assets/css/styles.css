@@ -9,7 +9,7 @@
 
 /*===== Colores =====*/
 :root{
-    --first-color: green;
+    --first-color: #1e2939;
     --white-color: #FAFAFF;
     --dark-color: #2A3B47;
     --text-color: #697477;
@@ -18,14 +18,14 @@
 /*===== Fuente y tipografia =====*/
 :root{
     --body-font: 'Montserrat', sans-serif;
-    --big-font-size: 6.25rem;
+    --big-font-size: 14px;
     --h2-font-size: 1.25rem;
     --normal-font-size: .938rem;
     --small-font-size: .813rem;
 }
 @media screen and (min-width: 768px){
     :root{
-        --big-font-size: 10.5rem;
+        --big-font-size: 36px;
         --h2-font-size: 2rem;
         --normal-font-size: 1rem;
         --small-font-size: .875rem;
@@ -73,8 +73,12 @@ a{
     color: var(--text-color);
 }
 img{
+    display: none;
     max-width: 100%;
     height: auto;
+    /* display: block; */
+}
+img.foto{
     display: block;
 }
 
@@ -178,7 +182,7 @@ img{
 /*===== HOME =====*/
 .home{
     position: relative;
-    background-color: green;
+    background-color: grey;
     overflow: hidden;
 }
 .home__container{
@@ -283,8 +287,13 @@ img{
     background-color: var(--white-color);
 }
 .portfolio__container{
-    justify-items: center;
+    /* justify-items: center; */
     row-gap: 2rem;
+}
+@media screen and (min-width: 768px){
+   .portfolio__container{
+    justify-items: center;
+   }
 }
 .portfolio__img{
     position: relative;
@@ -388,6 +397,9 @@ img{
 }
 
 @media screen and (min-width: 768px){
+    img {
+        display: block;
+    }
     body{
         margin: 0;
     }
